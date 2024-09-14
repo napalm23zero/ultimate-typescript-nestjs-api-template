@@ -1,0 +1,29 @@
+{
+    "name": "ultimate-typescript-nestjs-api-template",
+    "dockerComposeFile": "./docker-compose.yaml",
+    "service": "ultimate-backend-core", 
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": ".devcontainer/entrypoint.sh",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "esbenp.prettier-vscode",
+          "VisualStudioExptTeam.vscodeintellicode",
+          "mhutchie.git-graph",
+          "adpyke.codesnap",
+          "GitHub.copilot-chat",
+          "GitHub.copilot",
+          "GitHub.vscode-github-actions",
+          "dbaeumer.vscode-eslint",
+          "firsttris.vscode-jest-runner",
+          "ashinzekene.nestjs",
+          "christian-kohler.npm-intellisense",
+          "ms-vscode.vscode-typescript-next",
+          "Angular.ng-template",
+          "bmewburn.vscode-intelephense-client",
+          "mikestead.dotenv"
+        ]
+      }
+    }
+  }
+  

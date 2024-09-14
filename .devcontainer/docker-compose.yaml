@@ -1,0 +1,62 @@
+services:
+  ultimate-backend-core:
+    build:
+      context: .. # Going up one directory. It's intentional, not an escape attempt.
+      dockerfile: .devcontainer/dockerfiles/backend.Dockerfile # This is where the NestJS backend magic happens.
+    container_name: ultimate-backend-core # A name because you don't want to be lost in a sea of containers.
+    image: napalm23zero/ultimate-backend-core # Custom image for the ultimate backend.
+    ports:
+      - "${BACKEND_PORT}:3000" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+    volumes:
+      - ../:/workspace # Your code will be here.
+    env_file:
+      - .env # Secrets are stored in the .env file.
+    logging:
+      driver: "json-file" # Logs are important!
+      options:
+        max-size: "10m" # No need for logs bigger than your mom!!! Whoooooaaaaahhhhh!
+        max-file: "3" # Rotate logs because infinite may be quite a lot.
+    command: [
+      "sh", "-c", "trap 'docker-compose stop' EXIT; while :; do sleep 1; done"
+    ] # Keeps the backend running and stops all services when this container stops. You're welcome.
+
+  ultimate-mysql-database:
+    build:
+      context: .. # Same trick as before. We're still in the same galaxy, just a different planet.
+      dockerfile: .devcontainer/dockerfiles/postgres.Dockerfile # Because our backend needs a solid database to store the chaos.
+    container_name: ultimate-mysql-database # A name because you don't want to be lost in a sea of containers.
+    image: hustletech/ultimate-mysql-database # Custom database image for the ultimate project.
+    ports:
+      - "${MYSQL_PORT}:3306" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+    environment: # Off course we are using .env, what you think we are? MANIACS????
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
+      MYSQL_DATABASE: ${MYSQL_DATABASE} 
+      MYSQL_USER: ${MYSQL_USER} 
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD} 
+      MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL: ${MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL} 
+    volumes:
+      - ./data/mysql:/var/lib/mysql # Save the database data in the local ./data/mysql directory. Backup or regret, your choice.
+
+  ultimate-redis-cache:
+    build:
+      context: .. # Again, up one level. It's like Docker Compose parkour.
+      dockerfile: .devcontainer/dockerfiles/redis.Dockerfile # Redis config for those lightning-fast lookups.
+    container_name: ultimate-redis-cache # A name because you don't want to be lost in a sea of containers.
+    image: hustletech/ultimate-redis-cache # Custom cache image for the ultimate project.
+    ports:
+      - "${REDIS_PORT}:6379" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+    environment: # Off course we are using .env, what you think we are? SAVAGES????
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    volumes:
+      - ./data/redis:/data # Store Redis data locally because persistence is key.
+
+volumes:
+  # Defining the volumes where data lives locally.
+  mysql-data:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  hustletech:
+    driver: bridge # We're building bridges, not walls. Those containers need to talk to each other. But will not be able to talk to the outside world.
