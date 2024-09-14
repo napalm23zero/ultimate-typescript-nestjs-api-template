@@ -19,7 +19,6 @@
           "ashinzekene.nestjs",
           "christian-kohler.npm-intellisense",
           "ms-vscode.vscode-typescript-next",
-          "Angular.ng-template",
           "bmewburn.vscode-intelephense-client",
           "mikestead.dotenv"
         ]
