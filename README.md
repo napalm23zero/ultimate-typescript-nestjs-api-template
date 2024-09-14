@@ -1,4 +1,3 @@
-
 # Ultimate API Template Project
 
 <p align="center">
@@ -69,7 +68,7 @@ I'm here to help, so don't hesitate to contact me via email or any of my social 
 
 For documentation, please refer to the Table of Contents:
 
-- [Documentation in English](docs/en-us/000%20-%20table-of-contents.md)
-- [Documentação em Português](docs/pt-br/000%20-%20table-of-contents.md)
+- [Documentation in English](docs/en-us/000.table-of-contents.md)
+- [Documentação em Português](docs/pt-br/000.table-of-contents.md)
 
 Stay tuned as this repository evolves into your ultimate API development toolkit.

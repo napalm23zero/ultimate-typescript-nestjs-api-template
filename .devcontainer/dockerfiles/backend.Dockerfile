@@ -27,6 +27,7 @@ WORKDIR /workspace
 
 # Install the NestJS CLI globally, because this is a NestJS project, duh!
 RUN npm install -g @nestjs/cli
+RUN npm install -g npm-check-updates
 
 # This is the port what you want to expose to the outside world
 EXPOSE 3000 
