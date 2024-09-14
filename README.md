@@ -2,15 +2,15 @@
 # Ultimate API Template Project
 
 <p align="center">
-  <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript">
-  <img src="https://img.icons8.com/color/48/000000/nestjs.png" alt="NestJS">
-  <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="VSCode">
-  <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker">
+   <a href="https://www.typescriptlang.org"><img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript"></a>
+    <a href="https://nestjs.com"><img src="https://img.icons8.com/color/48/000000/nestjs.png" alt="NestJS"></a>
+    <a href="https://code.visualstudio.com"><img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="VSCode"></a>
+    <a href="https://www.docker.com"><img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker"></a>
+    <a href="https://www.mysql.com"><img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL"></a>
+    <a href="https://redis.io"><img src="https://img.icons8.com/color/48/000000/redis.png" alt="Redis"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Typescript-NestJS-blue" alt="TypeScript NestJS">
-  <img src="https://img.shields.io/badge/docker-available-blue" alt="Docker">
   <img src="https://img.shields.io/badge/devcontainer-ready-blue" alt="DevContainer">
   <img src="https://img.shields.io/badge/swagger-available-green" alt="Swagger">
 </p>
