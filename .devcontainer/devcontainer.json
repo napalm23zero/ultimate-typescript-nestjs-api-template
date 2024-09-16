@@ -7,20 +7,21 @@
     "customizations": {
       "vscode": {
         "extensions": [
-          "esbenp.prettier-vscode",
-          "VisualStudioExptTeam.vscodeintellicode",
-          "mhutchie.git-graph",
-          "adpyke.codesnap",
-          "GitHub.copilot-chat",
-          "GitHub.copilot",
-          "GitHub.vscode-github-actions",
-          "dbaeumer.vscode-eslint",
-          "firsttris.vscode-jest-runner",
-          "ashinzekene.nestjs",
-          "christian-kohler.npm-intellisense",
-          "ms-vscode.vscode-typescript-next",
-          "bmewburn.vscode-intelephense-client",
-          "mikestead.dotenv"
+            "esbenp.prettier-vscode",
+            "VisualStudioExptTeam.vscodeintellicode",
+            "mhutchie.git-graph",
+            "adpyke.codesnap",
+            "GitHub.copilot-chat",
+            "GitHub.copilot",
+            "GitHub.vscode-github-actions",
+            "dbaeumer.vscode-eslint",
+            "firsttris.vscode-jest-runner",
+            "ashinzekene.nestjs",
+            "christian-kohler.npm-intellisense",
+            "ms-vscode.vscode-typescript-next",
+            "bmewburn.vscode-intelephense-client",
+            "mikestead.dotenv",
+            "steoates.autoimport"
         ]
       }
     }
