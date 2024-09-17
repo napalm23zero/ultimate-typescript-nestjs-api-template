@@ -34,10 +34,10 @@ If you’re using VS Code (and you should be), go ahead and install the **Dev Co
 Here comes the magic part:
 
 1. Open your project folder in VS Code.
-2. Hit `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the Command Palette.
+2. Hit Ctrl+Shift+P (or Cmd+Shift+P on Mac) to open the Command Palette.
 3. Type **"Dev Containers: Reopen in Container"** and hit Enter.
 
-VS Code will now spin up a container based on the configuration in your project’s `.devcontainer` folder. Grab a coffee while Docker does its thing.
+VS Code will now spin up a container based on the configuration in your project’s .devcontainer folder. Grab a coffee while Docker does its thing.
 
 ### Step 4: Work Inside the DevContainer
 
@@ -45,19 +45,30 @@ Once the container is ready, you’re all set to start coding! Everything will r
 
 ### Step 5: Customizing Your DevContainer
 
-Want to tweak things? Of course you do. Look for a `.devcontainer.json` file in your project directory. Here, you can define the base Docker image, extensions, settings, and more. This is your playground. Go wild.
+Want to tweak things? Of course you do. Look for a `.devcontainer` folder in your project directory. Inside, you'll find configuration files like `devcontainer.json` and `docker-compose.yaml` where you can define the base Docker image, extensions, settings, and more. This is your playground. Go wild.
+
+### Step 6: Exploring the Services
+
+Our DevContainer setup includes multiple services to make your development environment as close to production as possible:
+
+- **Backend Service**: Running NestJS, because we're fancy like that.
+- **MySQL Database**: For all your relational data needs.
+- **Redis Cache**: To cache or not to cache? Always cache.
+- **MongoDB Database**: When NoSQL is the right answer (it often is).
+
+All these services are defined in the `.devcontainer` directory and are automatically set up when you open the project in the DevContainer. Talk about convenience!
 
 ## Advanced: Persisting Data Between Containers
 
 A common question: **What happens to my data when the container shuts down?**
 
-Good news — VS Code keeps your project files safe and sound on your local machine, but anything installed or saved **inside** the container (like logs, installed packages, etc.) will vanish unless you persist it with Docker volumes. This ensures you always start with a clean environment, but if you need persistence, just configure it in your Docker setup.
+Good news — VS Code keeps your project files safe and sound on your local machine, but anything installed or saved **inside** the container (like logs, installed packages, etc.) will vanish unless you persist it with Docker volumes. This ensures you always start with a clean environment, but if you need persistence, just configure it in your Docker setup. Don't worry, our `docker-compose.yaml` takes care of that by defining volumes for MySQL, Redis, and MongoDB data.
 
 ## Troubleshooting
 
 - **Container won’t start?** Check your Docker is running and the `.devcontainer` config is correct.
 - **Performance issues?** Give Docker more resources (CPU, memory) in its settings.
-- **Missing dependencies?** Make sure your `.devcontainer.json` file includes everything you need — this is where you define what’s installed in the container.
+- **Missing dependencies?** Make sure your `.devcontainer` files include everything you need — this is where you define what’s installed in the container.
 
 ## Conclusion
 

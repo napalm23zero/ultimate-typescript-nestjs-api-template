@@ -1,3 +1,5 @@
+version: '3.7'
+
 services:
   ultimate-backend-core:
     build:
@@ -6,34 +8,32 @@ services:
     container_name: ultimate-backend-core # A name because you don't want to be lost in a sea of containers.
     image: napalm23zero/ultimate-backend-core # Custom image for the ultimate backend.
     ports:
-      - "${BACKEND_PORT}:3000" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+      - '${HOST_BACKEND_PORT}:${DEVCONTAINER_BACKEND_PORT}' # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
     volumes:
       - ../:/workspace # Your code will be here.
     env_file:
       - .env # Secrets are stored in the .env file.
     logging:
-      driver: "json-file" # Logs are important!
+      driver: 'json-file' # Logs are important!
       options:
-        max-size: "10m" # No need for logs bigger than your mom!!! Whoooooaaaaahhhhh!
-        max-file: "3" # Rotate logs because infinite may be quite a lot.
-    command: [
-      "sh", "-c", "trap 'docker-compose stop' EXIT; while :; do sleep 1; done"
-    ] # Keeps the backend running and stops all services when this container stops. You're welcome.
+        max-size: '10m' # No need for logs bigger than your mom!!! Whoooooaaaaahhhhh!
+        max-file: '3' # Rotate logs because infinite may be quite a lot.
+    command: ['sh', '-c', "trap 'docker-compose stop' EXIT; while :; do sleep 1; done"] # Keeps the backend running and stops all services when this container stops. You're welcome.
 
   ultimate-mysql-database:
     build:
       context: .. # Same trick as before. We're still in the same galaxy, just a different planet.
-      dockerfile: .devcontainer/dockerfiles/postgres.Dockerfile # Because our backend needs a solid database to store the chaos.
+      dockerfile: .devcontainer/dockerfiles/mysql.Dockerfile # Because our backend needs a solid database to store the chaos.
     container_name: ultimate-mysql-database # A name because you don't want to be lost in a sea of containers.
     image: hustletech/ultimate-mysql-database # Custom database image for the ultimate project.
     ports:
-      - "${MYSQL_PORT}:3306" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
-    environment: # Off course we are using .env, what you think we are? MANIACS????
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
-      MYSQL_DATABASE: ${MYSQL_DATABASE} 
-      MYSQL_USER: ${MYSQL_USER} 
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD} 
-      MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL: ${MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL} 
+      - '${HOST_MYSQL_PORT}:${DEVCONTAINER_MYSQL_PORT}' # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+    environment: # Of course we are using .env, what you think we are? MANIACS????
+      MYSQL_ROOT_PASSWORD: ${DEVCONTAINER_MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${DEVCONTAINER_MYSQL_DATABASE}
+      MYSQL_USER: ${DEVCONTAINER_MYSQL_USER}
+      MYSQL_PASSWORD: ${DEVCONTAINER_MYSQL_PASSWORD}
+      MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL: ${DEVCONTAINER_MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL}
     volumes:
       - ./data/mysql:/var/lib/mysql # Save the database data in the local ./data/mysql directory. Backup or regret, your choice.
 
@@ -44,11 +44,26 @@ services:
     container_name: ultimate-redis-cache # A name because you don't want to be lost in a sea of containers.
     image: hustletech/ultimate-redis-cache # Custom cache image for the ultimate project.
     ports:
-      - "${REDIS_PORT}:6379" # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
-    environment: # Off course we are using .env, what you think we are? SAVAGES????
-      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      - '${HOST_REDIS_PORT}:${DEVCONTAINER_REDIS_PORT}' # Remapped to a new port to keep things fresh. Outside world, meet the backend through this port.
+    environment: # Of course we are using .env, what you think we are? SAVAGES????
+      REDIS_PASSWORD: ${DEVCONTAINER_REDIS_PASSWORD}
     volumes:
       - ./data/redis:/data # Store Redis data locally because persistence is key.
+
+  ultimate-mongo-database:
+    build:
+      context: .. # Following the same rule. Just going up a level, nothing crazy.
+      dockerfile: .devcontainer/dockerfiles/mongo.Dockerfile # MongoDB, because noSQL is sometimes the right answer.
+    container_name: ultimate-mongo-database # Gotta give Mongo a name, it's not a mindless beast.
+    image: hustletech/ultimate-mongo-database # Custom MongoDB image for the project.
+    ports:
+      - '${HOST_MONGO_PORT}:${DEVCONTAINER_MONGO_PORT}' # Remapping to keep things organized. World, meet Mongo.
+    environment: # MongoDB environment variables are important too. .env all the way.
+      MONGO_INITDB_ROOT_USERNAME: ${DEVCONTAINER_MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DEVCONTAINER_MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${DEVCONTAINER_MONGO_INITDB_DATABASE}
+    volumes:
+      - ./data/mongo:/data/db # Keeping Mongo's data locally so you don't lose everything when the container goes poof.
 
 volumes:
   # Defining the volumes where data lives locally.
@@ -56,7 +71,9 @@ volumes:
     driver: local
   redis-data:
     driver: local
+  mongo-data:
+    driver: local
 
 networks:
   hustletech:
-    driver: bridge # We're building bridges, not walls. Those containers need to talk to each other. But will not be able to talk to the outside world.
+    driver: bridge # We're building bridges, not walls. These containers need to talk to each other. But will not be able to talk to the outside world.

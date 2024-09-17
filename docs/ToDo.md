@@ -7,7 +7,7 @@
 - [x] documentation
 - [x] CORS-setup
 - [x] environment-setup
-- [ ] database-integration
+- [x] database-integration
 - [ ] rate-limiting
 - [ ] clean-architecture
 - [ ] CRUD

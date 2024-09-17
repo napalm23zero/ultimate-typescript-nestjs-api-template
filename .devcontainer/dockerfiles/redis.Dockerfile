@@ -25,7 +25,7 @@ RUN mkdir -p /usr/local/etc/redis/ && \
 WORKDIR /workspace
 
 # Start Redis like a true Sith Lord, with a password because we’re not just handing out cache to everyone
-CMD ["redis-server", "/usr/local/etc/redis/redis.conf", "--requirepass", "darkSideRedis"]
+CMD ["sh", "-c", "redis-server /usr/local/etc/redis/redis.conf --requirepass \"$REDIS_PASSWORD\""]
 
 # We like sharing, but only through the right channel. Exposing the default Redis port
 EXPOSE 6379

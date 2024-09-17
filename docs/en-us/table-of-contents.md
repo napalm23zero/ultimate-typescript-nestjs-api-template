@@ -11,5 +11,7 @@ Welcome to the documentation for the **Ultimate API Template Project**. Below is
 5. [Documenting Your Application with Swagger](documentation.md)
 6. [CORS](cors.md)
 7. [Environment Variables](environment-variables.md)
+8. [Database Connectione](database-connection.md)
+9. [Database Configuration](database-config.md)
 
 Stay tuned for more updates!

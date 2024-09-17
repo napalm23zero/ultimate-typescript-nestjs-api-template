@@ -1,29 +1,38 @@
+import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 import { config } from 'dotenv'
 import { json, urlencoded } from 'express'
+import { connectMongoDatabase } from 'src/config/database/mongo.database.config'
+import { connectMySqlDatabase } from 'src/config/database/mysql.database.config'
+import { connectRedisDatabase } from 'src/config/database/redis.database.config'
 import { AppModule } from './app.module'
-import { setupCors } from './config/cors.config'
-import { setupSwagger } from './config/swagger.config'
 
-// Load environment variables based on the current environment from the "environment/" folder
-config({ path: `./environment/.env.${process.env.NODE_ENV || 'development'}` })
+// Load environment variables from the .env file and override existing variables
+config({ path: `./environment/.env.${process.env.NODE_ENV || 'development'}`, override: true })
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { logger: ['error', 'warn', 'log', 'debug'] })
+
+  // Get ConfigService instance
+  const configService = app.get(ConfigService)
 
   // Enable JSON and URL-encoded data parsing
   app.use(json())
   app.use(urlencoded({ extended: true }))
 
-  // Setup CORS configuration
-  app.enableCors(setupCors())
+  // Connect MySQL
+  await connectMySqlDatabase(app)
 
-  // Setup Swagger documentation
-  setupSwagger(app)
+  // Connect Redis
+  connectRedisDatabase(configService)
 
-  // Listen on the configured port from the .env file, or fallback to port 3000
-  const port = process.env.APP_PORT || 3000
+  // Connect MongoDB
+  connectMongoDatabase(app)
+
+  // Listen on the configured port
+  const port = configService.get<number>('APP_PORT', 3000)
   await app.listen(port)
   console.log(`Application is running on: http://localhost:${port}`)
 }
+
 bootstrap()
