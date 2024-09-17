@@ -70,7 +70,7 @@ Agora chegou o momento da verdade. Abra seu navegador (ou qualquer outra ferrame
 http://localhost:3000/ping
 ```
 
-E **BOOM!** Você deve ver o texto: **"Está funcionando!"** Se não, bem, confira novamente sua porta, sua configuração ou suas escolhas de vida inteiras.
+E **BOOM!** Você deve ver o texto **"That works!"** Se não, bem, confira novamente sua porta, sua configuração ou suas escolhas de vida inteiras.
 
 **Parabéns!** Você oficialmente criou seu primeiro controller. Agora vá se gabar disso para seus colegas devs.
 

@@ -90,11 +90,11 @@ const config = new DocumentBuilder()
 
 - Desenvolvimento? Rode com:
   ```bash
-  NODE_ENV=development npm run start
+    npm run start dev
   ```
 - Produção? Melhor ter cuidado, mas aqui vai:
   ```bash
-  NODE_ENV=production npm run start
+    npm run start prod
   ```
 
 E é isso! Agora você está no controle total das variáveis de ambiente. Parabéns! Você está a um passo de se tornar um ninja profissional de ambiente.

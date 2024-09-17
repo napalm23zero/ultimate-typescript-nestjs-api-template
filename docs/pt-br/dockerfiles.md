@@ -21,7 +21,7 @@ Agora vamos entender o propósito de cada arquivo e como eles se juntam para cri
 
 ### 1. `docker-compose.yaml`
 
-Este é o **orquestrador**. Ele define como o Docker deve executar os serviços de backend, MySQL, Redis e agora o novo **MongoDB**. Com um simples comando (`docker-compose up`), ele garante que cada serviço rode de forma independente, mas com a capacidade de se comunicarem quando necessário.
+Este é o **orquestrador**. Ele define como o Docker deve executar os serviços de **backend**, **MySQL**, **Redis** e **MongoDB**. Com um simples comando (`docker-compose up`), ele garante que cada serviço rode de forma independente, mas com a capacidade de se comunicarem quando necessário.
 
 ### 2. `dockerfiles/`
 
@@ -34,7 +34,7 @@ Esta pasta contém os **Dockerfiles** para cada serviço: backend, banco de dado
 - **redis.Dockerfile**:
   - Configura o **Redis**, um poderoso banco de dados em memória usado para caching. O Redis acelera suas consultas e torna o desenvolvimento mais fluido.
 - **mongo.Dockerfile**:
-  - A adição mais recente: **MongoDB**, um banco de dados NoSQL. Este Dockerfile prepara o MongoDB para ser executado e expõe a porta 27017.
+  - O **MongoDB** é um banco de dados NoSQL. Este Dockerfile prepara o MongoDB para ser executado e expõe a porta 27017.
 
 ### 3. `.env`
 

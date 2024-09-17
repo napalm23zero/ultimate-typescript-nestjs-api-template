@@ -22,7 +22,7 @@ The `.devcontainer` directory is where we define everything related to how our *
 
 ### 1. `docker-compose.yaml`
 
-This file is the **conductor of the orchestra**. It tells Docker which services to run, how to build them, and how they should interact. It includes configurations for the **backend**, **MySQL**, **Redis**, and now the shiny new **MongoDB**.
+This file is the **conductor of the orchestra**. It tells Docker which services to run, how to build them, and how they should interact. It includes configurations for the **backend**, **MySQL**, **Redis**, and the **MongoDB**.
 
 In simple terms, `docker-compose.yaml` is the map that Docker follows to spin up all the components of your project with a single command (`docker-compose up`). It ensures that each service runs independently but can communicate with the others as needed.
 
@@ -33,7 +33,7 @@ This folder contains individual **Dockerfiles** for each service. Dockerfiles ar
 - **backend.Dockerfile**: Builds the NestJS backend environment. It installs the necessary tools (like the NestJS CLI) and prepares the container to serve the backend API on port 3000. This is where the magic of the API development happens.
 - **mysql.Dockerfile**: It configures a standard MySQL server for development use, exposing port 3306 for database interactions.
 - **redis.Dockerfile**: This one handles **Redis**, a powerful in-memory data store, often used for caching. It sets up Redis to be ready for fast lookups and caching, making your development faster and smoother.
-- **mongo.Dockerfile**: The latest addition, **MongoDB**, which handles NoSQL database interactions. It's built to run MongoDB and expose port 27017.
+- **mongo.Dockerfile**: This is **MongoDB**, which handles NoSQL database interactions. It's built to run MongoDB and expose port 27017.
 
 ### 3. `.env`
 

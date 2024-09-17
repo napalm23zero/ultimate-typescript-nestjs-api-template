@@ -40,7 +40,7 @@ By default, your NestJS app will be accessible at:
 http://localhost:3000
 ```
 
-### But... if you’re running inside a DevContainer, or Docker, or maybe you're just feeling extra fancy and changed the port mapping in your `docker-compose.yaml`, then access it on the port you mapped, for example:
+But... if you’re running inside a DevContainer, or Docker, or maybe you're just feeling extra fancy and changed the port mapping in your `docker-compose.yaml`, then access it on the port you mapped, for example:
 
 ```
 http://localhost:3090
