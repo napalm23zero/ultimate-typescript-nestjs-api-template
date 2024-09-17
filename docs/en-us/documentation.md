@@ -76,3 +76,5 @@ Feel free to click **"Try out"** if you're feeling brave. When you do, you’ll 
 ---
 
 **Congrats, you Swagger wizard!** Now your application is automatically documented, your fellow developers won't need to be psychic to understand how your API works, and you can officially call yourself _fancy_. 🎉
+
+[back](table-of-contents.md)

@@ -73,3 +73,5 @@ http://localhost:3000/ping
 And **BOOM!** You should see the text: **"That works!"** If not, well, double-check your port, your configuration, or just your entire life choices.
 
 **Congrats!** You've officially created your first controller. Now go brag about it to your fellow devs.
+
+[back](table-of-contents.md)

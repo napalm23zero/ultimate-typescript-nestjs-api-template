@@ -1,4 +1,3 @@
-
 # DevContainers: Welcome to the Future of Development
 
 So, you want to be a serious developer? Welcome to the world of **DevContainers**. If you haven’t used them before, prepare to have your mind blown (in a good way). Let's dive in.
@@ -23,12 +22,15 @@ Now that you know the basics, let’s get to the real fun part: **running these 
 Let’s keep this simple and efficient, like you, right? Follow these steps:
 
 ### Step 1: Install Docker
+
 Make sure you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. If not, download and install it. Trust me, it’s painless (mostly).
 
 ### Step 2: Install the Dev Containers Extension
+
 If you’re using VS Code (and you should be), go ahead and install the **Dev Containers** extension from the marketplace. Just search for "Dev Containers" and hit install.
 
 ### Step 3: Open the Folder in a DevContainer
+
 Here comes the magic part:
 
 1. Open your project folder in VS Code.
@@ -38,9 +40,11 @@ Here comes the magic part:
 VS Code will now spin up a container based on the configuration in your project’s `.devcontainer` folder. Grab a coffee while Docker does its thing.
 
 ### Step 4: Work Inside the DevContainer
+
 Once the container is ready, you’re all set to start coding! Everything will run in this isolated environment, and you won’t have to worry about messing with your local setup. Your terminal, extensions, and code are all running in this beautiful little box.
 
 ### Step 5: Customizing Your DevContainer
+
 Want to tweak things? Of course you do. Look for a `.devcontainer.json` file in your project directory. Here, you can define the base Docker image, extensions, settings, and more. This is your playground. Go wild.
 
 ## Advanced: Persisting Data Between Containers
@@ -60,3 +64,5 @@ Good news — VS Code keeps your project files safe and sound on your local mach
 With DevContainers, you're stepping into a world where development environments are consistent, reproducible, and portable. No more "it works on my machine" excuses. You now have a reliable, professional-grade tool that keeps your workflow smooth and your sanity intact.
 
 Enjoy the ride, and welcome to the future of development.
+
+[back](table-of-contents.md)

@@ -1,4 +1,3 @@
-
 # DevContainers: Bem-vindo ao Futuro do Desenvolvimento
 
 Então, você quer ser um desenvolvedor sério? Bem-vindo ao mundo dos **DevContainers**. Se você nunca usou antes, prepare-se para se surpreender (de uma boa maneira). Vamos mergulhar nisso.
@@ -23,12 +22,15 @@ Agora que você sabe o básico, vamos para a parte divertida: **rodar essas bele
 Vamos manter isso simples e eficiente, como você, certo? Siga esses passos:
 
 ### Passo 1: Instale o Docker
+
 Certifique-se de que você tem o [Docker](https://www.docker.com/products/docker-desktop) instalado na sua máquina. Se não, faça o download e instale. Confie em mim, é tranquilo (na maioria das vezes).
 
 ### Passo 2: Instale a extensão Dev Containers
+
 Se você usa o VS Code (e você deveria), vá em frente e instale a extensão **Dev Containers** do marketplace. Basta procurar por "Dev Containers" e clicar em instalar.
 
 ### Passo 3: Abra a pasta em um DevContainer
+
 Aqui vem a parte mágica:
 
 1. Abra a pasta do seu projeto no VS Code.
@@ -38,9 +40,11 @@ Aqui vem a parte mágica:
 O VS Code agora vai iniciar um container com base nas configurações da pasta `.devcontainer` do seu projeto. Pegue um café enquanto o Docker faz o seu trabalho.
 
 ### Passo 4: Trabalhe dentro do DevContainer
+
 Quando o container estiver pronto, você está pronto para começar a codar! Tudo rodará neste ambiente isolado, e você não precisará se preocupar em bagunçar sua configuração local. Seu terminal, extensões e código estão todos funcionando nessa caixinha bonita.
 
 ### Passo 5: Personalizando seu DevContainer
+
 Quer ajustar as coisas? Claro que sim. Procure um arquivo `.devcontainer.json` no diretório do seu projeto. Aqui, você pode definir a imagem base do Docker, extensões, configurações e muito mais. Este é o seu playground. Divirta-se.
 
 ## Avançado: Persistindo dados entre containers
@@ -60,3 +64,5 @@ Boa notícia — o VS Code mantém seus arquivos do projeto seguros no seu compu
 Com DevContainers, você está entrando em um mundo onde os ambientes de desenvolvimento são consistentes, reproduzíveis e portáteis. Nada mais de desculpas como "funciona na minha máquina". Agora você tem uma ferramenta de nível profissional que mantém seu fluxo de trabalho suave e sua sanidade intacta.
 
 Aproveite a jornada e bem-vindo ao futuro do desenvolvimento.
+
+[voltar](table-of-contents.md)
