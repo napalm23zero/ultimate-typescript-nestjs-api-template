@@ -2,18 +2,14 @@ import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.int
 
 /**
  * Setup CORS configuration for the application.
- * This is necesary to allow or deny access to the API from different origins.
+ * This is necessary to allow or deny access to the API from different origins.
  */
 export function setupCors(): CorsOptions {
   return {
     // We'll allow any origin in dev... but in production? Only the chosen ones.
     origin: (origin, callback) => {
-      const allowedOrigins =
-        process.env.NODE_ENV === 'prod'
-          ? ['https://your-production-domain.com', 'https://another-trusted-domain.com']
-          : '*' // '*' means "We don't care who you are" — for development only, of course.
-
-      if (allowedOrigins === '*' || allowedOrigins.includes(origin)) {
+      const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',')
+      if (allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
         callback(null, true) // You shall pass.
       } else {
         callback(new Error('Not allowed by CORS')) // Access denied. Out of here, PUNK!

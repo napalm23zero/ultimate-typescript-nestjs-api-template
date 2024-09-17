@@ -10,5 +10,6 @@ Bem-vindo à documentação do **Ultimate API Template Project**. Abaixo está a
 4. [Primeiro Controller: O Ping](first-controller.md)
 5. [Documentando Sua Aplicação com Swagger](documentation.md)
 6. [CORS](cors.md)
+7. [Variáveis de Ambiente](environment-variables.md)
 
 Fique ligado para mais atualizações!

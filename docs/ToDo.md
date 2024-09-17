@@ -6,13 +6,13 @@
 - [x] first-controller
 - [x] documentation
 - [x] CORS-setup
+- [x] environment-setup
+- [ ] database-integration
 - [ ] rate-limiting
-- [ ] environment-setup
-- [ ] versioning
 - [ ] clean-architecture
 - [ ] CRUD
+- [ ] versioning
 - [ ] input-validation
-- [ ] database-integration
 - [ ] pagination-filtering
 - [ ] routes-setup
 - [ ] error-handling
