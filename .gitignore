@@ -32,7 +32,7 @@ lerna-debug.log*
 
 # IDE - VSCode
 .vscode/*
-.devcontainer/
+.devcontainer/*
 
 # dotenv environment variable files
 .env
