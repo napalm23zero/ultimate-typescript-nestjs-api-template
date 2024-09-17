@@ -9,5 +9,6 @@ Welcome to the documentation for the **Ultimate API Template Project**. Below is
 3. [Creating and Running Your First NestJS Project](creating-project.md)
 4. [First Controller: The Ping](first-controller.md)
 5. [Documenting Your Application with Swagger](documentation.md)
+6. [CORS](cors.md)
 
 Stay tuned for more updates!

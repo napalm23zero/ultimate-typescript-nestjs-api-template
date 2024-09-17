@@ -5,7 +5,7 @@
 - [x] creating-project
 - [x] first-controller
 - [x] documentation
-- [ ] CORS-setup
+- [x] CORS-setup
 - [ ] rate-limiting
 - [ ] environment-setup
 - [ ] versioning
