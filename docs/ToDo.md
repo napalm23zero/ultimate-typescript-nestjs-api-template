@@ -1,0 +1,42 @@
+# API Development Best Practices - TODO List
+
+- [x] dockerfile
+- [x] devcontainers
+- [x] creating-project
+- [x] first-controller
+- [x] documentation
+- [ ] CORS-setup
+- [ ] rate-limiting
+- [ ] environment-setup
+- [ ] versioning
+- [ ] clean-architecture
+- [ ] CRUD
+- [ ] input-validation
+- [ ] database-integration
+- [ ] pagination-filtering
+- [ ] routes-setup
+- [ ] error-handling
+- [ ] HTTPS-setup
+- [ ] authentication
+- [ ] authorization
+- [ ] unit-tests
+- [ ] integration-tests
+- [ ] contract-tests
+- [ ] CI-CD-tests
+- [ ] caching
+- [ ] async-tasks
+- [ ] CDN-integration
+- [ ] changelog
+- [ ] git-workflow
+- [ ] CI-CD-pipeline
+- [ ] logging-monitoring
+- [ ] error-retries
+- [ ] uptime-monitoring
+- [ ] security-audits
+- [ ] compliance-checks
+- [ ] deprecation-strategy
+- [ ] graceful-shutdowns
+- [ ] dev-experience
+- [ ] SDK-libraries
+- [ ] scaling-strategies
+- [ ] version-migration

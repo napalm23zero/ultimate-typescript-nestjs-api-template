@@ -1,4 +1,4 @@
-# Ultimate API Template Project
+# Ultimate Typescript NestJS API Template
 
 <p align="center">
    <a href="https://www.typescriptlang.org"><img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript"></a>
