@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core'
 import { json, urlencoded } from 'express'
+import { setupSwagger } from 'src/config/swagger.config'
 import { AppModule } from './app.module'
 
 async function bootstrap() {
@@ -8,6 +9,9 @@ async function bootstrap() {
   // Enable JSON and URL-encoded data parsing
   app.use(json())
   app.use(urlencoded({ extended: true }))
+
+  // Setup Swagger documentation
+  setupSwagger(app)
 
   // Listen on the configured port
   const port = 3000
