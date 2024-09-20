@@ -2,19 +2,33 @@ import { ConfigService } from '@nestjs/config'
 import { MongooseModuleOptions } from '@nestjs/mongoose'
 
 /**
- * MongoDB Configuration Factory.
- * Configures MongoDB connection with credentials provided via ConfigService.
+ * Generates MongoDB configuration using the ever-so-helpful ConfigService.
+ *
+ * @param configService - The ConfigService instance because hardcoding credentials is for rookies.
+ * @returns MongooseModuleOptions for connecting to MongoDB.
  */
-export const mongoConfig = (configService: ConfigService): MongooseModuleOptions => ({
-  uri: `mongodb://${configService.get<string>('MONGO_INITDB_ROOT_USERNAME')}:${configService.get<string>('MONGO_INITDB_ROOT_PASSWORD')}@${configService.get<string>('MONGO_HOST')}:${configService.get<number>('MONGO_PORT')}/${configService.get<string>('MONGO_DB')}`,
-})
+export const mongoConfig = (configService: ConfigService): MongooseModuleOptions => {
+  // Retrieve MongoDB credentials and host information from the configuration service.
+  const username = configService.get<string>('MONGO_INITDB_ROOT_USERNAME')
+  const password = configService.get<string>('MONGO_INITDB_ROOT_PASSWORD')
+  const host = configService.get<string>('MONGO_HOST')
+  const port = configService.get<number>('MONGO_PORT')
+  const database = configService.get<string>('MONGO_DB')
+
+  // Construct the MongoDB URI in a more readable way.
+  const uri = `mongodb://${username}:${password}@${host}:${port}/${database}`
+
+  return { uri }
+}
 
 /**
- * Sets up MongoDB connection for the application.
- * This function integrates with Mongoose to initialize the connection.
+ * Establishes a connection to MongoDB for the application.
+ *
+ * @param app - The application instance, because why pass what you need directly?
  */
 export function connectMongoDatabase(app: any): void {
+  // Retrieve the ConfigService from the app context, assuming it's actually there.
   const configService = app.get(ConfigService)
-  const mongooseOptions = mongoConfig(configService)
+  mongoConfig(configService)
   console.log('MongoDB connected successfully! 🍃')
 }
