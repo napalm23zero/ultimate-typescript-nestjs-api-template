@@ -95,7 +95,7 @@ THROTTLE_MESSAGE="Too many requests, slow down cowboy!"
 
 ## Response
 
-This is what you will seee after requesting too much!
+This is what you will see after requesting too much!
 
 ![Too Many Requests](../img/004.png 'Too Many Requests')
 
