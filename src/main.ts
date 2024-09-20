@@ -5,6 +5,7 @@ import { json, urlencoded } from 'express'
 import { connectMongoDatabase } from 'src/config/database/mongo.database.config'
 import { connectMySqlDatabase } from 'src/config/database/mysql.database.config'
 import { connectRedisDatabase } from 'src/config/database/redis.database.config'
+import { setupSwagger } from 'src/config/swagger.config'
 import { AppModule } from './app.module'
 
 // Load environment variables from the .env file and override existing variables
@@ -19,6 +20,9 @@ async function bootstrap() {
   // Enable JSON and URL-encoded data parsing
   app.use(json())
   app.use(urlencoded({ extended: true }))
+
+  // Setup Swagger
+  setupSwagger(app)
 
   // Connect MySQL
   await connectMySqlDatabase(app)

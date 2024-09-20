@@ -1,13 +1,9 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
-import { PingController } from './controller/ping.controller'
+import { CommonModule } from 'src/common/common.module'
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
-  ],
-  controllers: [PingController],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), CommonModule],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}
