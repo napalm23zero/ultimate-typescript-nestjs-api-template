@@ -8,7 +8,7 @@
 - [x] CORS-setup
 - [x] environment-setup
 - [x] database-integration
-- [ ] rate-limiting
+- [x] rate-limiting
 - [ ] clean-architecture
 - [ ] CRUD
 - [ ] versioning
