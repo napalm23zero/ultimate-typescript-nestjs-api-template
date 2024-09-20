@@ -13,5 +13,6 @@ Bem-vindo à documentação do **Ultimate API Template Project**. Abaixo está a
 7. [Variáveis de Ambiente](environment-variables.md)
 8. [Conexão ao Banco de Dados](database-connection.md)
 9. [Configuração de Banco de Dados](database-config.md)
+10. [Limitador de Requestsg](rate-limit.md)
 
 Fique ligado para mais atualizações!

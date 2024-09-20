@@ -13,5 +13,6 @@ Welcome to the documentation for the **Ultimate API Template Project**. Below is
 7. [Environment Variables](environment-variables.md)
 8. [Database Connectione](database-connection.md)
 9. [Database Configuration](database-config.md)
+10. [Rate Limiting](rate-limit.md)
 
 Stay tuned for more updates!
