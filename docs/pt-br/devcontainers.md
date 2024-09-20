@@ -76,4 +76,6 @@ Com DevContainers, você está entrando em um mundo onde os ambientes de desenvo
 
 Aproveite a jornada e bem-vindo ao futuro do desenvolvimento.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

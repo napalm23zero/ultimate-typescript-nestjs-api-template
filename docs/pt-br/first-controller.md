@@ -74,4 +74,6 @@ E **BOOM!** Você deve ver o texto **"That works!"** Se não, bem, confira novam
 
 **Parabéns!** Você oficialmente criou seu primeiro controller. Agora vá se gabar disso para seus colegas devs.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

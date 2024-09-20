@@ -55,4 +55,6 @@ Com nossa configuração personalizada de CORS, você é como o Mestre Jedi da s
 
 "Essas não são as requisições que você está procurando." Siga em frente.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

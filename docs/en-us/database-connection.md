@@ -91,4 +91,6 @@ Connect and try setting a key. If it doesn't work, maybe stick to something simp
 
 Connecting to databases isn't that hard, but you'd be amazed at how often people mess it up. Don't be one of those people. Follow the instructions, use your brain, and you'll be fine. Probably.
 
+---
+
 [back](table-of-contents.md)

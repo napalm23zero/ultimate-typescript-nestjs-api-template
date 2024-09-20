@@ -74,4 +74,6 @@ And **BOOM!** You should see the text: **"That works!"** If not, well, double-ch
 
 **Congrats!** You've officially created your first controller. Now go brag about it to your fellow devs.
 
+---
+
 [back](table-of-contents.md)

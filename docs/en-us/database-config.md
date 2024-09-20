@@ -120,4 +120,6 @@ Look how cute the application runnnig wth database connected!
 
 ![Database Connected](../img/003.png 'Database Connected')
 
+---
+
 [back](table-of-contents.md)

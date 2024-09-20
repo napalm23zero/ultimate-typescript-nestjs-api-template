@@ -77,4 +77,6 @@ Sinta-se à vontade para clicar em **"Try out"** se estiver se sentindo corajoso
 
 **Parabéns, você agora é um mago do Swagger!** Sua aplicação está documentada automaticamente, seus colegas desenvolvedores não precisarão ser videntes para entender como usar sua API, e você pode se autodenominar _chique_. 🎉
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

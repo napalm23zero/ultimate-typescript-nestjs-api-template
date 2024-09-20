@@ -61,4 +61,6 @@ By organizing the `.devcontainer` folder like this, you're ensuring that all tea
 
 Now go build something awesome — and stick to best practices.
 
+---
+
 [back](table-of-contents.md)

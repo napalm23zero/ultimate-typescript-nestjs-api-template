@@ -120,4 +120,6 @@ Olha como ficou bonitinho a aplicação rodando com as bases de dados conectadas
 
 ![Base de Dados Conectada](../img/003.png 'Base de Dados Conectada')
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

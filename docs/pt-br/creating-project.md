@@ -58,4 +58,6 @@ Próxima parada: construir uma API intergaláctica.
 
 _Nota:_ Sempre verifique a configuração da porta e certifique-se de que ela está corretamente definida no seu ambiente ou configuração Docker. E sim, você provavelmente vai esquecer disso pelo menos uma vez. Todos nós esquecemos.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

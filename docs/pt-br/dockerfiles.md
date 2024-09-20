@@ -62,4 +62,6 @@ Ao organizar a pasta `.devcontainer` desta forma, você garante que todos os mem
 
 Agora vá construir algo incrível — e siga as melhores práticas.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

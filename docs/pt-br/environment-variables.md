@@ -99,4 +99,6 @@ const config = new DocumentBuilder()
 
 E é isso! Agora você está no controle total das variáveis de ambiente. Parabéns! Você está a um passo de se tornar um ninja profissional de ambiente.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)

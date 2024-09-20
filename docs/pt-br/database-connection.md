@@ -91,4 +91,6 @@ Conecte-se e tente definir uma chave. Se não funcionar, talvez seja melhor fica
 
 Conectar-se a bancos de dados não é tão difícil, mas você ficaria surpreso com a frequência com que as pessoas estragam tudo. Não seja uma dessas pessoas. Siga as instruções, use o cérebro, e você ficará bem. Provavelmente.
 
-[voltar](table-of-contents.md)
+---
+
+[back](table-of-contents.md)
