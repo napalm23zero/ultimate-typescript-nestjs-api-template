@@ -9,8 +9,8 @@
 - [x] environment-setup
 - [x] database-integration
 - [x] rate-limiting
-- [ ] clean-architecture
-- [ ] CRUD
+- [x] clean-architecture
+- [x] CRUD
 - [ ] versioning
 - [ ] input-validation
 - [ ] pagination-filtering

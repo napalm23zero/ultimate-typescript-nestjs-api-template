@@ -14,5 +14,7 @@ Welcome to the documentation for the **Ultimate API Template Project**. Below is
 8. [Database Connectione](database-connection.md)
 9. [Database Configuration](database-config.md)
 10. [Rate Limiting](rate-limit.md)
+11. [Clean Architecture](clean-architecture.md)
+12. [Generic CRUD](generic-crud.md)
 
 Stay tuned for more updates!
